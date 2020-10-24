@@ -121,8 +121,8 @@
             </Realm>
 
             <!-- 关闭热部署autoDeploy, 减少安全问题 -->
-            /Users/jiao/jiao_cdn/yachao.zip解压到/Users/jiao/jiao_cdn/yachao
-            目录中的/webapps/yachao是应用目录，这里的appBase填/Users/jiao/jiao_cdn/yachao/webapps/yachao
+            <!--            /Users/jiao/jiao_cdn/yachao.zip解压到/Users/jiao/jiao_cdn/yachao-->
+            <!--            目录中的/webapps/yachao是应用目录，这里的appBase填/Users/jiao/jiao_cdn/yachao/webapps/yachao-->
             <Host name="localhost" appBase="../webapps/yachao" unpackWARs="true" autoDeploy="false">
                 <!-- 当前目录为webapps -->
                 <Context path="" docBase="."/>
