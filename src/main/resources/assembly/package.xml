@@ -1,0 +1,37 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+	<id>web-zip</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/${project.artifactId}</directory>
+			<outputDirectory>/webapps/${project.artifactId}</outputDirectory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+			<excludes>
+				<exclude>assembly</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.build.directory}/classes/assembly/</directory>
+			<outputDirectory>/</outputDirectory>
+			<excludes>
+				<exclude>package.xml</exclude>
+			</excludes>
+		</fileSet>
+		<!-- 空文件夹 -->
+<!-- 		<fileSet> -->
+<!-- 			<directory>${project.build.directory}/classes/assembly</directory> -->
+<!-- 			<outputDirectory>/logs</outputDirectory> -->
+<!-- 			<excludes> -->
+<!-- 			    <exclude>*</exclude> -->
+<!-- 			</excludes> -->
+<!-- 		</fileSet> -->
+	</fileSets>
+</assembly>

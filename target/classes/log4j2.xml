@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <!--log根目录-->
+        <Property name="rootLogDir">${sys:catalina.home}/logs</Property>
+        <!--项目工程log目录-->
+        <Property name="projectLogDir">${rootLogDir}/yaochao</Property>
+        <!--默认pattern-->
+        <Property name="default_pattern">[%d] %5p [%30.30C:%4.4L] - %m%n</Property>
+    </Properties>
+
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
